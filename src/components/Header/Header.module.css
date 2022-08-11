@@ -1,0 +1,17 @@
+.header{
+    min-width: 320px;
+    display: flex;
+    position: absolute;
+    top: 72px;
+    justify-content: center;
+    
+}
+
+.header > img + img{
+    margin-left: 1rem;
+}
+
+.content{
+    position: absolute;
+    top: 72px
+}
