@@ -1,0 +1,5 @@
+.background{
+    max-width: 100vw;
+    height: 200px;
+    background: var(--gray-700);
+}

@@ -1,10 +1,15 @@
 import * as React from 'react'
+import { Background } from './components/Background'
 import { Header } from './components/Header'
+import styles from './App.module.css'
 
 function App() {
   return (
     <>
-      <Header/>
+      <Background/>
+      <main className={styles.main}>
+        <Header/>
+      </main>
     </>
   )
 }
