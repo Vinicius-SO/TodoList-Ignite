@@ -1,5 +1,6 @@
 .flexWrapper{
     width: 46rem;
+    height: 1.125rem;
     display: flex;
     justify-content: space-between;
 }
@@ -21,4 +22,11 @@
     border-radius: 12px;
     color: var(--gray-100);
     background: var(--gray-400);
+}
+
+@media (max-width:750px) {
+    .flexWrapper{
+        max-width: 20rem;
+    }
+    
 }
