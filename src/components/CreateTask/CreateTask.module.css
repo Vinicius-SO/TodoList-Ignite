@@ -54,3 +54,24 @@
     cursor: pointer;
     background: var(--blue-400);
 }
+
+@media (max-width: 1100px) {
+    .content > input {
+        width: 30rem;
+        max-width: 39.875rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .content > input {
+        width: clamp(min(15rem), 39.875rem, 85%);
+        max-width: 39.875rem;
+    }
+    .content > button[type=submit]{
+        min-width: 3rem
+    }
+    .content > button[type=submit] > svg{
+        margin-left: 3px;
+        font-size: 12px;
+    }
+}

@@ -24,7 +24,7 @@
   -purple-600: #5E60CE;
 
   -red-200: #E25858;
-  
+  width: 100%;
 }
 
 
@@ -37,7 +37,7 @@
 body {
   margin: 0 auto;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--gray-600);
   color: var(--gray-200);
 }
