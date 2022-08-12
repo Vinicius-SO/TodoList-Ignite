@@ -3,6 +3,7 @@ import { Background } from './components/Background'
 import { Header } from './components/Header'
 import styles from './App.module.css'
 import { CreateTask } from './components/CreateTask'
+import { Tasks } from './components/Tasks'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Background/>
       <main className={styles.main}>
         <Header/>
-        <CreateTask></CreateTask>
+        <CreateTask/>
+        <Tasks />
       </main>
     </>
   )

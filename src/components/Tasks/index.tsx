@@ -1,7 +1,9 @@
 import { TasksInfos } from "../TasksInfos";
-
+import styles from "./Tasks.module.css"
 export function Tasks(){
     return (
-        <TasksInfos/>
+        <div className={styles.wrapper}>
+            <TasksInfos/>
+        </div>
     )
 }

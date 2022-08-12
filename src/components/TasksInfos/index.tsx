@@ -1,9 +1,12 @@
+
+import styles from './TasksInfos.module.css'
+
 export function TasksInfos(){
     return(
         <>
-            <div>
-                <div>Taferas criadas <span>0</span></div>
-                <div>Concluidas<span>0</span></div>
+            <div className={styles.flexWrapper}>
+                <div className={styles.info}>Taferas criadas<span className={styles.circle}>0</span></div>
+                <div>Concluidas<span className={styles.circle}>0</span></div>
             </div>
         </>
     )
