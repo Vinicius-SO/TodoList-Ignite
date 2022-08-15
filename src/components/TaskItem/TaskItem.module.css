@@ -1,0 +1,90 @@
+.container{
+    background: var(--gray-500);
+    display: flex;
+    width: 100%;
+    height: 4.5rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    line-break: auto;
+    position: relative;
+    border-radius: 8px;
+}
+
+.container > label{
+    display: block;
+    width: 39.5rem;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-100);
+    line-height: 140%;
+    margin: 0 .75rem;
+}
+
+.container > label {
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    width: fit-content;
+    transition: color .3s ease;
+  
+}
+
+.container > button{
+    display: flex;
+    height: 20px;
+    background: transparent;
+    margin-top: 2px;
+    border: none;
+    color: var(--gray-300);
+ 
+}
+
+.container > input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 3px;
+    border: 1px solid var(--blue-400);
+    border-radius: 100%;
+}
+
+.container > input:checked{
+    background: var(--purple-400);
+    border-color: var(--purple-400);
+    color: var(--gray-100);
+}
+
+.container > input:checked::after{
+    content: "";
+    width: 7.31px;
+    height: 4.69px;
+    border-bottom: 1px solid var(--gray-100);
+    border-left: 1px solid var(--gray-100);
+    
+    position: absolute;
+    left: 20.5px;
+    top: 23.4px;
+    transform: rotate(-45deg);
+}
+
+
+
+.container > input:checked + label{
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+
+.container > *{
+    cursor: pointer;
+}
+
+.container > button:hover{
+    color: var(--red-200);
+} 
