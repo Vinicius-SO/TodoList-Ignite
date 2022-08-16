@@ -20,6 +20,11 @@ const ToDoList:Array<Todo> = [
         content: 'Fazer a Comida',
         isCompleted: true
     },
+    {
+        id: 4,
+        content: 'Fazer a sexo',
+        isCompleted: true
+    },
 
 ]
 
