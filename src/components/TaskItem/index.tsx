@@ -1,12 +1,20 @@
 import { Trash } from "phosphor-react";
+import { Todo } from "../TaksList";
 
 import styles from './TaskItem.module.css'
 
-export function TaskItem(){
+interface TaskItemProps extends Todo{
+    isCompleteChange:(id:number)=>void
+}
+
+export function TaskItem({ content, id, isCompleted, isCompleteChange }:TaskItemProps){
+    function handleCheckBoxChange(){
+        isCompleteChange(id)
+    }
     return(
         <div className={styles.container}>
-            <input id=''type="checkbox" />
-            <label htmlFor=''>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</label>
+            <input onChange={handleCheckBoxChange} checked={isCompleted} id={id.toString()}type="checkbox" />
+            <label htmlFor={id.toString()}>{content}</label>
             <button>
                 <Trash size={20}/>
             </button>
