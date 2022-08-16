@@ -9,24 +9,7 @@ import styles from "./Tasks.module.css"
 
 export function Tasks(){
 
-    const [todoList, setTodoList] = useState<Todo[]>([
-        {
-            id: 1,
-            content: 'Lavar a louça',
-            isCompleted: false
-        },
-        {
-            id: 2,
-            content: 'Passar a roupa',
-            isCompleted: true
-        },
-        {
-            id: 3,
-            content: 'Fazer a Comida',
-            isCompleted: true
-        },
-      
-    ])
+    const [todoList, setTodoList] = useState<Todo[]>([])
 
 
     const completedItens = todoList.reduce((acc:number, Todo:Todo) => {
@@ -58,12 +41,20 @@ export function Tasks(){
         setTodoList([...mutableTodoList])
     }
 
+    function handleDeleteTask(id:number){
+        const filteredTodoList = todoList.filter(todo=>{
+            return todo.id !== id
+        })
+
+        setTodoList([...filteredTodoList])
+    }
+
     return (
         <>
         <CreateTask createNewTodo={handleCreateNewTodo}/>
             <div className={styles.wrapper}>
                 <TasksInfos createdTasksAmount={todoList.length} completedTasks={completedItens} />
-                {todoList.length !== 0 ? <TaskList isCompleteChange={handleCompleteStatusChange} tasks={todoList} /> : <TaskListEmpty/>}
+                {todoList.length !== 0 ? <TaskList deleteTask={handleDeleteTask} isCompleteChange={handleCompleteStatusChange} tasks={todoList} /> : <TaskListEmpty/>}
             </div>
         </>
     )

@@ -10,15 +10,22 @@ export interface Todo{
 interface TaskListProps{
     tasks: Todo[]
     isCompleteChange:(id:number)=>void
+    deleteTask:(id:number)=>void
 }
 
-export function TaskList({ tasks, isCompleteChange}:TaskListProps){
+export function TaskList({ tasks, isCompleteChange, deleteTask}:TaskListProps){
     return(
         <div className={styles.wrapper}>
             {
                 tasks.map(task=>{
                     return(
-                        <TaskItem id={task.id} content={task.content} isCompleted={task.isCompleted} isCompleteChange={isCompleteChange} />
+                        <TaskItem
+                         id={task.id}
+                         content={task.content}
+                         isCompleted={task.isCompleted}
+                         isCompleteChange={isCompleteChange}
+                         deleteTask={deleteTask}
+                        />
                     )
                 })
             }
