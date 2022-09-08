@@ -4,8 +4,8 @@ import { Todo } from "../TaksList";
 import styles from './TaskItem.module.css'
 
 interface TaskItemProps extends Todo{
-    isCompleteChange:(id:number)=>void
-    deleteTask:(id:number)=>void
+    isCompleteChange:(id:string)=>void
+    deleteTask:(id:string)=>void
 }
 
 export function TaskItem({ content, id, isCompleted, isCompleteChange, deleteTask }:TaskItemProps){

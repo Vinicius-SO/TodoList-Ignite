@@ -1,11 +1,14 @@
 import { useState } from "react";
+
+import { v4 as uuidv4 } from 'uuid';
+
+
 import { CreateTask } from "../CreateTask";
 import { TaskList, Todo } from "../TaksList";
-import { TaskItem } from "../TaskItem";
 import { TaskListEmpty } from "../TaskListEmpty";
 import { TasksInfos } from "../TasksInfos";
-import styles from "./Tasks.module.css"
 
+import styles from "./Tasks.module.css"
 
 export function Tasks(){
 
@@ -24,14 +27,14 @@ export function Tasks(){
     function handleCreateNewTodo(todo:string){
         setTodoList((state)=>{
             return [...state, {
-                id: state.length + 1,
+                id: uuidv4(),
                 content: todo,
                 isCompleted:false,
             }]
         })
     }
 
-    function handleCompleteStatusChange(id:number){
+    function handleCompleteStatusChange(id:string){
         const mutableTodoList = [...todoList]
         console.log(mutableTodoList)
         const todoItem = mutableTodoList.find(item=> item.id == id)
@@ -41,7 +44,7 @@ export function Tasks(){
         setTodoList([...mutableTodoList])
     }
 
-    function handleDeleteTask(id:number){
+    function handleDeleteTask(id:string){
         const filteredTodoList = todoList.filter(todo=>{
             return todo.id !== id
         })

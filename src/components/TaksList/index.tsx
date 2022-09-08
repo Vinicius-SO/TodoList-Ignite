@@ -2,15 +2,15 @@ import { TaskItem } from "../TaskItem"
 import styles from "./TaskList.module.css"
 
 export interface Todo{
-    id:number
+    id:string
     content:string
     isCompleted: boolean
 }
 
 interface TaskListProps{
     tasks: Todo[]
-    isCompleteChange:(id:number)=>void
-    deleteTask:(id:number)=>void
+    isCompleteChange:(id:string)=>void
+    deleteTask:(id:string)=>void
 }
 
 export function TaskList({ tasks, isCompleteChange, deleteTask}:TaskListProps){
