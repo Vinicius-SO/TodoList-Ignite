@@ -26,9 +26,12 @@ Antes de iniciar o aplicativo ToDo List em seu ambiente local, certifique-se de 
 
 - **NPM (Node Package Manager):** Geralmente é instalado automaticamente com o Node.js.
 
-## Configuração e Instalação
+## Contribuindo
+Este é um projeto de código aberto e estamos abertos a contribuições da comunidade. Se você deseja contribuir, siga estas diretrizes:
 
-1. Clone este repositório em sua máquina local:
-
-   ```bash
-   git clone https://github.com/seu-usuario/todo-list-app.git
+Faça um fork do repositório.
+Crie uma branch para a sua contribuição: git checkout -b minha-contribuicao.
+Faça as alterações desejadas e commit com mensagens claras.
+Envie um pull request para a branch principal.
+## Licença
+Este projeto é licenciado sob a Licença MIT.
